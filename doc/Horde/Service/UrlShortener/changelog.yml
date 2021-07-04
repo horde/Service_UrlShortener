@@ -1,4 +1,15 @@
 ---
+3.0.0alpha1:
+  api: 1.0.0
+  state:
+    release: stable
+    api: stable
+  date: 2021-07-04
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl21
+  notes: |
+    [rla] Package for composer/H6
 2.0.4:
   api: 1.0.0
   state:
@@ -8,7 +19,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes:
+  notes: ~
 2.0.3:
   api: 1.0.0
   state:
