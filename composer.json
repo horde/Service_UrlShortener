@@ -17,9 +17,9 @@
     ],
     "require": {
         "php": "^5.3 || ^7",
-        "horde/Exception": "^2",
-        "horde/Url": "^2",
-        "horde/Http": "^2"
+        "horde/exception": "^2",
+        "horde/url": "^2",
+        "horde/http": "^2"
     },
     "replace": {
     },
