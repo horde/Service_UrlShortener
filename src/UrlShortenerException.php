@@ -1,7 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
+namespace Horde\Service\UrlShortener;
+
+use Horde\Exception\Wrapped;
+
 /**
- * PSR-0 backward compatibility wrapper for Horde\Service\UrlShortener\UrlShortenerException.
+ * Exception for URL shortening services.
  *
  * Copyright 2011-2026 Horde LLC (http://www.horde.org/)
  *
@@ -10,9 +16,8 @@
  *
  * @author   Michael J Rubinsky <mrubinsk@horde.org>
  * @license  http://www.horde.org/licenses/lgpl21 LGPL 2.1
- * @deprecated Use Horde\Service\UrlShortener\UrlShortenerException instead.
  * @package  Service_UrlShortener
  */
-class Horde_Service_UrlShortener_Exception extends Horde_Exception_Wrapped
+class UrlShortenerException extends Wrapped
 {
 }

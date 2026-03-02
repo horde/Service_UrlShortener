@@ -1,10 +1,9 @@
 {
-    "minimum-stability": "dev",
     "name": "horde/service_urlshortener",
     "description": "URL shortening library",
     "type": "library",
     "homepage": "https://www.horde.org/libraries/Horde_Service_UrlShortener",
-    "license": "LGPL-2.1",
+    "license": "LGPL-2.1-only",
     "authors": [
         {
             "name": "Michael J Rubinsky",
@@ -12,7 +11,7 @@
             "role": "lead"
         }
     ],
-    "time": "2021-07-04",
+    "time": "2026-03-02",
     "repositories": [
         {
             "type": "composer",
@@ -20,16 +19,32 @@
         }
     ],
     "require": {
-        "php": "^7",
+        "php": "^8.1",
         "horde/exception": "^3 || dev-FRAMEWORK_6_0",
         "horde/url": "^3 || dev-FRAMEWORK_6_0",
-        "horde/http": "^3 || dev-FRAMEWORK_6_0"
+        "psr/http-client": "^1.0",
+        "psr/http-message": "^2.0 || ^1.0",
+        "psr/http-factory": "^1.0"
     },
-    "require-dev": {},
-    "suggest": {},
+    "require-dev": {
+        "phpunit/phpunit": "^11 || ^12"
+    },
+    "suggest": {
+        "horde/http": "For PSR-7/PSR-18 HTTP implementation"
+    },
     "autoload": {
+        "psr-4": {
+            "Horde\\Service\\UrlShortener\\": "src/"
+        },
         "psr-0": {
             "Horde_Service_UrlShortener": "lib/"
         }
-    }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Horde\\Service\\UrlShortener\\Test\\": "test/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

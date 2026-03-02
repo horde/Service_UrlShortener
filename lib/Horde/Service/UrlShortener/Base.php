@@ -1,27 +1,23 @@
 <?php
+
 /**
- * This file contains the Horde_Service_UrlShortener class for shortening URLs.
+ * PSR-0 backward compatibility wrapper for Horde\Service\UrlShortener.
  *
- * Copyright 2011-2017 Horde LLC (http://www.horde.org/)
+ * This maintains the legacy mutable API while delegating to the modern
+ * PSR-4 implementation.
+ *
+ * Copyright 2011-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (LGPL). If you
  * did not receive this file, see http://www.horde.org/licenses/lgpl21.
  *
  * @author   Michael J Rubinsky <mrubinsk@horde.org>
  * @license  http://www.horde.org/licenses/lgpl21 LGPL 2.1
- * @category Horde
+ * @deprecated Use Horde\Service\UrlShortener\* instead. Will be removed in Horde 7.
  * @package  Service_UrlShortener
  */
-
-/**
- * Horde_Service_UrlShortener Base class
- *
- * @author   Michael J Rubinsky <mrubinsk@horde.org>
- * @category Horde
- * @package  Service_UrlShortener
- */
- abstract class Horde_Service_UrlShortener_Base
- {
+abstract class Horde_Service_UrlShortener_Base
+{
     /**
      * @var array
      */
@@ -35,10 +31,8 @@
     /**
      * Constructor
      *
-     * @param  Horde_Http_Client $http [description]
-     * @param  array $params = array() [description]
-     *
-     * @return Horde_UrlShorten
+     * @param Horde_Http_Client $http
+     * @param array $params
      */
     public function __construct(Horde_Http_Client $http, $params = array())
     {
@@ -46,5 +40,13 @@
         $this->_params = $params;
     }
 
+    /**
+     * Shorten a URL.
+     *
+     * @param string $url  The URL to shorten
+     *
+     * @return string  The shortened URL
+     * @throws Horde_Service_UrlShortener_Exception
+     */
     abstract public function shorten($url);
- }
+}
