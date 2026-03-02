@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Horde\Service\UrlShortener\ValueObject;
 
-use Horde\Url\Url;
 use Psr\Http\Message\UriInterface;
 use Stringable;
 
@@ -45,14 +44,6 @@ final readonly class LongUrl implements Stringable
     public static function fromString(string $url): self
     {
         return new self($url);
-    }
-
-    /**
-     * Create from Horde\Url\Url.
-     */
-    public static function fromHordeUrl(Url $url): self
-    {
-        return new self($url->toString(raw: true));
     }
 
     /**

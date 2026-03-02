@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Horde\Service\UrlShortener;
 
-use Horde\Exception\Wrapped;
+use RuntimeException;
 
 /**
  * Exception for URL shortening services.
@@ -18,6 +18,6 @@ use Horde\Exception\Wrapped;
  * @license  http://www.horde.org/licenses/lgpl21 LGPL 2.1
  * @package  Service_UrlShortener
  */
-class UrlShortenerException extends Wrapped
+class UrlShortenerException extends RuntimeException
 {
 }
