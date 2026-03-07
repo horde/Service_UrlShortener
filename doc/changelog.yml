@@ -9,7 +9,6 @@
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
   notes: |+
-    
 3.0.0alpha1:
   api: 1.0.0
   state:
@@ -21,6 +20,20 @@
     uri: http://www.horde.org/licenses/lgpl21
   notes: |
     [rla] Package for composer/H6
+3.0.0-alpha4:
+  api: 3.0.0-alpha4
+  state:
+    release: alpha
+    api: alpha
+  date: 2026-03-07
+  license:
+    identifier: LGPL-2.1-only
+    uri: https://spdx.org/licenses/LGPL-2.1-only.html
+  notes: |-
+    refactor(tests): remove legacy dependencies and improve coverage
+    feat: implement PSR-4 with facade + domain pattern using native PSR-7/PSR-17
+    Add CI job for satis repo update
+    Development mode for Service_UrlShortener-3.0.0alpha3
 2.0.4:
   api: 1.0.0
   state:
@@ -64,17 +77,6 @@
     uri: http://www.horde.org/licenses/lgpl21
   notes: |
     [jan] Re-packaged 2.0.0 release.
-2.0.0:
-  api: 1.0.0
-  state:
-    release: stable
-    api: stable
-  date: 2012-10-30
-  license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    First stable release for Horde 5.
 2.0.0beta1:
   api: 1.0.0
   state:
@@ -97,28 +99,17 @@
     uri: http://www.horde.org/licenses/lgpl21
   notes: |
     First alpha release for Horde 5.
-1.0.0:
+2.0.0:
   api: 1.0.0
   state:
     release: stable
     api: stable
-  date: 2011-11-02
+  date: 2012-10-30
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
   notes: |
-    First stable release.
-1.0.0RC1:
-  api: 1.0.0RC1
-  state:
-    release: beta
-    api: beta
-  date: 2011-10-19
-  license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [jan] Fix dependency.
+    First stable release for Horde 5.
 1.0.0alpha1:
   api: 1.0.0alpha1
   state:
@@ -130,3 +121,25 @@
     uri: http://www.horde.org/licenses/lgpl21
   notes: |
     First alpha release.
+1.0.0RC1:
+  api: 1.0.0RC1
+  state:
+    release: beta
+    api: beta
+  date: 2011-10-19
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl21
+  notes: |
+    [jan] Fix dependency.
+1.0.0:
+  api: 1.0.0
+  state:
+    release: stable
+    api: stable
+  date: 2011-11-02
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl21
+  notes: |
+    First stable release.
